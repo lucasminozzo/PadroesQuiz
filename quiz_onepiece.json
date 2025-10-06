@@ -1,0 +1,192 @@
+{
+  "quiz": {
+    "dificuldade": {
+      "facil": [
+        {
+          "pergunta": "Qual é o nome do protagonista de One Piece?",
+          "alternativas": [
+            {"alt": "Monkey D. Luffy", "correct": true},
+            {"alt": "Roronoa Zoro", "correct": false},
+            {"alt": "Sanji", "correct": false},
+            {"alt": "Usopp", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual é o objetivo de Luffy?",
+          "alternativas": [
+            {"alt": "Se tornar o Rei dos Piratas", "correct": true},
+            {"alt": "Se tornar um Almirante da Marinha", "correct": false},
+            {"alt": "Dominar o mundo", "correct": false},
+            {"alt": "Se tornar o maior espadachim", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual é a fruta do diabo que Luffy comeu?",
+          "alternativas": [
+            {"alt": "Gomu Gomu no Mi", "correct": true},
+            {"alt": "Mera Mera no Mi", "correct": false},
+            {"alt": "Hie Hie no Mi", "correct": false},
+            {"alt": "Suna Suna no Mi", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual o nome do navio da tripulação antes do Thousand Sunny?",
+          "alternativas": [
+            {"alt": "Going Merry", "correct": true},
+            {"alt": "Red Force", "correct": false},
+            {"alt": "Oro Jackson", "correct": false},
+            {"alt": "Sunny Go", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem é o espadachim da tripulação?",
+          "alternativas": [
+            {"alt": "Zoro", "correct": true},
+            {"alt": "Sanji", "correct": false},
+            {"alt": "Brook", "correct": false},
+            {"alt": "Jinbe", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem é a navegadora dos Chapéus de Palha?",
+          "alternativas": [
+            {"alt": "Nami", "correct": true},
+            {"alt": "Robin", "correct": false},
+            {"alt": "Vivi", "correct": false},
+            {"alt": "Hiyori", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem é o cozinheiro da tripulação?",
+          "alternativas": [
+            {"alt": "Sanji", "correct": true},
+            {"alt": "Usopp", "correct": false},
+            {"alt": "Franky", "correct": false},
+            {"alt": "Chopper", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual membro da tripulação é um médico?",
+          "alternativas": [
+            {"alt": "Chopper", "correct": true},
+            {"alt": "Brook", "correct": false},
+            {"alt": "Sanji", "correct": false},
+            {"alt": "Robin", "correct": false}
+          ]
+        }
+      ],
+      "medio": [
+        {
+          "pergunta": "Qual o nome do irmão mais velho de Luffy?",
+          "alternativas": [
+            {"alt": "Portgas D. Ace", "correct": true},
+            {"alt": "Sabo", "correct": false},
+            {"alt": "Shanks", "correct": false},
+            {"alt": "Garp", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem é o autor de One Piece?",
+          "alternativas": [
+            {"alt": "Eiichiro Oda", "correct": true},
+            {"alt": "Masashi Kishimoto", "correct": false},
+            {"alt": "Akira Toriyama", "correct": false},
+            {"alt": "Yoshihiro Togashi", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual é o nome da organização criminosa liderada por Crocodile?",
+          "alternativas": [
+            {"alt": "Baroque Works", "correct": true},
+            {"alt": "Marinha", "correct": false},
+            {"alt": "Revolutionários", "correct": false},
+            {"alt": "Cipher Pol", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem foi o primeiro membro a se juntar a Luffy?",
+          "alternativas": [
+            {"alt": "Zoro", "correct": true},
+            {"alt": "Nami", "correct": false},
+            {"alt": "Sanji", "correct": false},
+            {"alt": "Usopp", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual membro é arqueólogo?",
+          "alternativas": [
+            {"alt": "Nico Robin", "correct": true},
+            {"alt": "Franky", "correct": false},
+            {"alt": "Brook", "correct": false},
+            {"alt": "Jinbe", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem é o carpinteiro do navio Thousand Sunny?",
+          "alternativas": [
+            {"alt": "Franky", "correct": true},
+            {"alt": "Usopp", "correct": false},
+            {"alt": "Brook", "correct": false},
+            {"alt": "Sanji", "correct": false}
+          ]
+        }
+      ],
+      "dificil": [
+        {
+          "pergunta": "Qual é o verdadeiro nome da Gomu Gomu no Mi?",
+          "alternativas": [
+            {"alt": "Hito Hito no Mi: Modelo Nika", "correct": true},
+            {"alt": "Bara Bara no Mi", "correct": false},
+            {"alt": "Yami Yami no Mi", "correct": false},
+            {"alt": "Mochi Mochi no Mi", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem derrotou Kaido em Wano?",
+          "alternativas": [
+            {"alt": "Monkey D. Luffy", "correct": true},
+            {"alt": "Zoro", "correct": false},
+            {"alt": "Kid e Law", "correct": false},
+            {"alt": "Yamato", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual foi o primeiro inimigo que Luffy derrotou usando o Gear Second?",
+          "alternativas": [
+            {"alt": "Blueno", "correct": true},
+            {"alt": "Rob Lucci", "correct": false},
+            {"alt": "Crocodile", "correct": false},
+            {"alt": "Arlong", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual era o apelido de Brook antes de se juntar aos Chapéus de Palha?",
+          "alternativas": [
+            {"alt": "Soul King", "correct": true},
+            {"alt": "Skeleton King", "correct": false},
+            {"alt": "Music Bones", "correct": false},
+            {"alt": "Bone Soul", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem foi o último membro a entrar na tripulação durante o arco de Wano?",
+          "alternativas": [
+            {"alt": "Jinbe", "correct": true},
+            {"alt": "Brook", "correct": false},
+            {"alt": "Franky", "correct": false},
+            {"alt": "Robin", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual membro da tripulação já foi um Shichibukai?",
+          "alternativas": [
+            {"alt": "Jinbe", "correct": true},
+            {"alt": "Zoro", "correct": false},
+            {"alt": "Sanji", "correct": false},
+            {"alt": "Robin", "correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}
