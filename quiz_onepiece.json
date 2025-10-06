@@ -3,6 +3,24 @@
     "dificuldade": {
       "facil": [
         {
+          "pergunta": "Qual o nome do primeiro navio dos Chapéus de Palha?",
+          "alternativas": [
+            {"alt": "Going Merry", "correct": true},
+            {"alt": "Thousand Sunny", "correct": false},
+            {"alt": "Oro Jackson", "correct": false},
+            {"alt": "Moby Dick", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem deu o chapéu de palha para Luffy?",
+          "alternativas": [
+            {"alt": "Shanks", "correct": true},
+            {"alt": "Gol D. Roger", "correct": false},
+            {"alt": "Rayleigh", "correct": false},
+            {"alt": "Ace", "correct": false}
+          ]
+        },
+        {
           "pergunta": "Qual é o nome do protagonista de One Piece?",
           "alternativas": [
             {"alt": "Monkey D. Luffy", "correct": true},
@@ -76,6 +94,25 @@
         }
       ],
       "medio": [
+        
+        {
+          "pergunta": "Qual o nome do pai de Luffy?",
+          "alternativas": [
+            {"alt": "Monkey D. Dragon", "correct": true},
+            {"alt": "Monkey D. Garp", "correct": false},
+            {"alt": "Gol D. Roger", "correct": false},
+            {"alt": "Shanks", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Em qual arco a tripulação dos Chapéus de Palha é derrotada e separada por Bartholomew Kuma?",
+          "alternativas": [
+            {"alt": "Arquipélago de Sabaody", "correct": true},
+            {"alt": "Thriller Bark", "correct": false},
+            {"alt": "Marineford", "correct": false},
+            {"alt": "Impel Down", "correct": false}
+          ]
+        },
         {
           "pergunta": "Qual o nome do irmão mais velho de Luffy?",
           "alternativas": [
@@ -132,6 +169,24 @@
         }
       ],
       "dificil": [
+        {
+          "pergunta": "Qual o nome da arma ancestral (Ancient Weapon) que Franky possuía as plantas?",
+          "alternativas": [
+            {"alt": "Pluton", "correct": true},
+            {"alt": "Poseidon", "correct": false},
+            {"alt": "Uranus", "correct": false},
+            {"alt": "Zeus", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem foi o primeiro personagem a ser revelado como usuário do Haki do Rei (Haoshoku Haki)?",
+          "alternativas": [
+            {"alt": "Shanks", "correct": true},
+            {"alt": "Monkey D. Luffy", "correct": false},
+            {"alt": "Portgas D. Ace", "correct": false},
+            {"alt": "Silvers Rayleigh", "correct": false}
+          ]
+        },
         {
           "pergunta": "Qual é o verdadeiro nome da Gomu Gomu no Mi?",
           "alternativas": [

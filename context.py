@@ -1,69 +1,86 @@
+# context.py
 import strategies as s
 import random
 import pergunta_Factory as pf
+from observers import PontuacaoObserver
 
 class Quiz:
     def __init__(self, dados_json):
         self.dados_json = dados_json
-        self.strategy = None
-        self.pontos = 0
+        self.strategy = None # Agora é a estratégia de PONTUAÇÃO
+        self.perguntas = []
+        self._observers = [] # Lista de observadores
+
+    # Métodos para o padrão Observer
+    def register(self, observer):
+        self._observers.append(observer)
+
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
 
     def escolher_dificuldade(self):
         print("=== Bem-vindo ao Quiz de One Piece ===\n")
         print("Escolha a dificuldade:")
-        print("1. Fácil")
-        print("2. Médio")
-        print("3. Difícil")
-        print("4. Misto")
+        print("1. Fácil (1 ponto por acerto)")
+        print("2. Médio (1.5 pontos por acerto)")
+        print("3. Difícil (2 pontos por acerto)")
+        print("4. Misto (3 pontos por acerto)")
 
         escolha = int(input("\nDigite o número da dificuldade: "))
 
+        dificuldades = self.dados_json["quiz"]["dificuldade"]
+        
         if escolha == 1:
-            self.strategy = s.FacilStrategy()
+            self.strategy = s.FacilPontuacaoStrategy()
+            self.perguntas = dificuldades["facil"]
         elif escolha == 2:
-            self.strategy = s.MedioStrategy()
+            self.strategy = s.MedioPontuacaoStrategy()
+            self.perguntas = dificuldades["medio"]
         elif escolha == 3:
-            self.strategy = s.DificilStrategy()
+            self.strategy = s.DificilPontuacaoStrategy()
+            self.perguntas = dificuldades["dificil"]
         elif escolha == 4:
-            self.strategy = s.MistoStrategy()
+            self.strategy = s.MistoPontuacaoStrategy()
+            self.perguntas = (dificuldades["facil"] + 
+                              dificuldades["medio"] + 
+                              dificuldades["dificil"])
         else:
             print("Opção inválida, saindo...")
             exit()
 
     def jogar(self):
-        if self.strategy is None:
+        if not self.strategy:
             self.escolher_dificuldade()
 
-        perguntas_raw = self.strategy.selecionar_perguntas(self.dados_json)
-        random.shuffle(perguntas_raw)
+        # Cria e registra o observador de pontuação com a estratégia escolhida
+        pontuacao_observer = PontuacaoObserver(self.strategy)
+        self.register(pontuacao_observer)
 
-        perguntas = [pf.criar(p) for p in perguntas_raw]
+        random.shuffle(self.perguntas)
+        perguntas_obj = [pf.criar(p) for p in self.perguntas]
+        acertos = 0
 
-        for idx, pergunta in enumerate(perguntas, 1):
+        for idx, pergunta in enumerate(perguntas_obj, 1):
             alternativas = pergunta.exibir(idx)
 
-            while True:  # validação de entrada
+            while True:
                 resposta = input("Sua resposta: ").strip()
-
-                if not resposta.isdigit():  # não é número
+                if not resposta.isdigit() or not 1 <= int(resposta) <= len(alternativas):
                     print("⚠️ Digite um número válido entre 1 e 4.")
                     continue
-
-                resposta = int(resposta)
-                if resposta < 1 or resposta > len(alternativas):  # fora do intervalo
-                    print("⚠️ Escolha um número entre 1 e 4.")
-                    continue
-
-                break  # entrada válida
-
-            # verificar resposta
+                break
+            
+            resposta = int(resposta)
             if alternativas[resposta - 1]["correct"]:
-                print("✅ Correto!")
-                self.pontos += 1
+                acertos += 1
+                self.notify() # Notifica os observadores (PontuacaoObserver) sobre o acerto
             else:
                 print("❌ Errado!")
                 correta = next(alt['alt'] for alt in alternativas if alt['correct'])
                 print(f"A resposta correta era: {correta}")
 
+        pontos_finais = pontuacao_observer.get_pontos()
         print("\n=== Fim do quiz! ===")
-        print(f"Você acertou {self.pontos} de {len(perguntas)} perguntas.")
+        print(f"Você acertou {acertos} de {len(perguntas_obj)} perguntas.")
+        print(f"Sua pontuação final foi: {pontos_finais} pontos.")

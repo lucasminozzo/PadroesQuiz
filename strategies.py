@@ -1,30 +1,23 @@
+# strategies.py
 from abc import ABC, abstractmethod
-import random
-class DificuldadeStrategy(ABC):
+
+class PontuacaoStrategy(ABC):
     @abstractmethod
-    def selecionar_perguntas(self, dados):
+    def calcular_pontos(self, pontos_atuais):
         pass
-    
-class FacilStrategy(DificuldadeStrategy):
-    def selecionar_perguntas(self, dados):
-        return dados["quiz"]["dificuldade"]["facil"]
 
+class FacilPontuacaoStrategy(PontuacaoStrategy):
+    def calcular_pontos(self, pontos_atuais):
+        return pontos_atuais + 1
 
-class MedioStrategy(DificuldadeStrategy):
-    def selecionar_perguntas(self, dados):
-        return dados["quiz"]["dificuldade"]["medio"]
+class MedioPontuacaoStrategy(PontuacaoStrategy):
+    def calcular_pontos(self, pontos_atuais):
+        return pontos_atuais + 1.5
 
+class DificilPontuacaoStrategy(PontuacaoStrategy):
+    def calcular_pontos(self, pontos_atuais):
+        return pontos_atuais + 2
 
-class DificilStrategy(DificuldadeStrategy):
-    def selecionar_perguntas(self, dados):
-        return dados["quiz"]["dificuldade"]["dificil"]
-    
-class MistoStrategy(DificuldadeStrategy):
-    def selecionar_perguntas(self, dados):
-        todas = (
-            dados["quiz"]["dificuldade"]["facil"]
-            + dados["quiz"]["dificuldade"]["medio"]
-            + dados["quiz"]["dificuldade"]["dificil"]
-        )
-        random.shuffle(todas)
-        return todas
+class MistoPontuacaoStrategy(PontuacaoStrategy):
+    def calcular_pontos(self, pontos_atuais):
+        return pontos_atuais + 3
