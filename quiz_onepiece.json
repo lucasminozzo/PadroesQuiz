@@ -3,12 +3,12 @@
     "dificuldade": {
       "facil": [
         {
-          "pergunta": "Qual o nome do primeiro navio dos Chapéus de Palha?",
+          "pergunta": "Qual o nome do atirador dos Chapéus de Palha?",
           "alternativas": [
-            {"alt": "Going Merry", "correct": true},
-            {"alt": "Thousand Sunny", "correct": false},
-            {"alt": "Oro Jackson", "correct": false},
-            {"alt": "Moby Dick", "correct": false}
+            {"alt": "Usopp", "correct": true},
+            {"alt": "Yasopp", "correct": false},
+            {"alt": "Van Augur", "correct": false},
+            {"alt": "Lucky Roux", "correct": false}
           ]
         },
         {
@@ -94,7 +94,24 @@
         }
       ],
       "medio": [
-        
+        {
+          "pergunta": "Quem é conhecido como 'O Cirurgião da Morte'?",
+          "alternativas": [
+            {"alt": "Trafalgar D. Water Law", "correct": true},
+            {"alt": "Eustass Kid", "correct": false},
+            {"alt": "X Drake", "correct": false},
+            {"alt": "Basil Hawkins", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Qual o nome da ilha natal de Nico Robin?",
+          "alternativas": [
+            {"alt": "Ohara", "correct": true},
+            {"alt": "Elbaf", "correct": false},
+            {"alt": "Water 7", "correct": false},
+            {"alt": "Dressrosa", "correct": false}
+          ]
+        },
         {
           "pergunta": "Qual o nome do pai de Luffy?",
           "alternativas": [
@@ -169,6 +186,24 @@
         }
       ],
       "dificil": [
+        {
+          "pergunta": "Qual o nome do elefante gigante que carrega a ilha de Zou em suas costas?",
+          "alternativas": [
+            {"alt": "Zunisha", "correct": true},
+            {"alt": "Laboon", "correct": false},
+            {"alt": "Surume", "correct": false},
+            {"alt": "Morgans", "correct": false}
+          ]
+        },
+        {
+          "pergunta": "Quem foi o almirante que se opôs fortemente à promoção de Aokiji para Almirante de Frota, resultando em uma batalha de 10 dias?",
+          "alternativas": [
+            {"alt": "Akainu (Sakazuki)", "correct": true},
+            {"alt": "Kizaru (Borsalino)", "correct": false},
+            {"alt": "Fujitora (Issho)", "correct": false},
+            {"alt": "Sengoku", "correct": false}
+          ]
+        },
         {
           "pergunta": "Qual o nome da arma ancestral (Ancient Weapon) que Franky possuía as plantas?",
           "alternativas": [
